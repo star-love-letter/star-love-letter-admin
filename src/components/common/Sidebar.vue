@@ -59,38 +59,38 @@ export default {
                 {
                     icon: 'el-icon-s-order',
                     index: 'content',
-                    title: '内容',
+                    title: '内容管理',
                     subs: [
                         {
                             index: 'content.user',
-                            title: '用户'
+                            title: '用户管理'
                         },
                         {
                             index: 'content.table',
-                            title: '帖子'
+                            title: '帖子管理'
                         },
                         {
                             index: 'content.comment',
-                            title: '评论'
+                            title: '评论管理'
                         }
                     ]
                 },
                 {
                     icon: 'el-icon-s-release',
                     index: 'report',
-                    title: '举报',
+                    title: '举报处理',
                      subs: [
                         {
                             index: 'report.user',
-                            title: '用户举报'
+                            title: '用户举报处理'
                         },
                         {
                             index: 'report.table',
-                            title: '帖子举报'
+                            title: '帖子举报处理'
                         },
                         {
                             index: 'report.comment',
-                            title: '评论举报'
+                            title: '评论举报处理'
                         }
                     ]
                 },

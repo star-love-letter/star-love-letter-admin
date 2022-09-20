@@ -32,10 +32,10 @@
                 <div class="container">
                     <div class="form-box">
                         <el-form ref="formViewRef" :model="formView" label-width="80px">
-                            <el-form-item label="页面尾部">
+                            <el-form-item label="页面头部">
                                 <el-input type="textarea" :rows="4" v-model="formView['view-header']"></el-input>
                             </el-form-item>
-                            <el-form-item label="页面头部">
+                            <el-form-item label="页面尾部">
                                 <el-input type="textarea" :rows="4" v-model="formView['view-footer']"></el-input>
                             </el-form-item>
                             <el-form-item>
@@ -119,7 +119,7 @@
                                 <el-form-item label="方式">
                                     <el-radio-group v-model="formSQL.type">
                                         <el-radio label="Execute"></el-radio>
-                                        <el-radio label="Updata"></el-radio>
+                                        <el-radio label="Update"></el-radio>
                                         <el-radio label="Query"></el-radio>
                                     </el-radio-group>
                                 </el-form-item>
@@ -234,7 +234,7 @@ export default {
             };
 
             if (this.formSQL.type == 'Execute') fun = AdminSettingData.sqlForExecute;
-            else if (this.formSQL.type == 'Updata') fun = AdminSettingData.sqlForUpdate;
+            else if (this.formSQL.type == 'Update') fun = AdminSettingData.sqlForUpdate;
             else if (this.formSQL.type == 'Query') fun = AdminSettingData.sqlForQuery;
 
             fun(this.formSQL.sql)

@@ -43,7 +43,7 @@
             </el-pagination>
         </el-card>
 
-        <el-dialog :visible.sync="dialogEditShow" v-dialogDrag title="编辑用户信息" top="7vh" center width="40%" :fullscreen="isMobile">
+        <el-dialog :visible.sync="dialogEditShow" v-dialogDrag title="编辑评论信息" top="7vh" center width="40%" :fullscreen="isMobile">
             <el-form ref="formRef" :model="form">
                 <el-form-item label="id">
                     <el-input disabled v-model="form.id"></el-input>
