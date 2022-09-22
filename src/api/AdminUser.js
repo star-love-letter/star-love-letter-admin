@@ -42,12 +42,23 @@ export const AdminUserData = {
         });
     },
     updateUser: (userId, name, email, wechat, studentId, state) => {
+        let args = {
+            'userId': userId, 'name': name, 'state': state
+        }
+
+        if (email != null)
+            args['email'] = email;
+
+        if (wechat != null)
+            args['wechat'] = wechat;
+
+        if (studentId != null)
+            args['studentId'] = studentId;
+
         return request({
             url: '/api/admin/user/updateUser',
             method: 'put',
-            params: {
-                'userId': userId, 'name': name, 'email': email, 'wechat': wechat, 'studentId': studentId, 'state': state
-            }
+            params: args
         });
     },
     delete: (userId) => {

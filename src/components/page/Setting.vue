@@ -32,6 +32,9 @@
                 <div class="container">
                     <div class="form-box">
                         <el-form ref="formViewRef" :model="formView" label-width="80px">
+                            <el-form-item label="统计代码">
+                                <el-input type="textarea" :rows="4" v-model="formView['view-statsCode']"></el-input>
+                            </el-form-item>
                             <el-form-item label="页面头部">
                                 <el-input type="textarea" :rows="4" v-model="formView['view-header']"></el-input>
                             </el-form-item>
@@ -46,10 +49,10 @@
                     </div>
                 </div>
             </el-tab-pane>
-            <el-tab-pane label="STMP设置">
+            <el-tab-pane label="SMTP设置">
                 <div class="container">
                     <div class="form-box">
-                        <el-form ref="formSMTPRef" :model="formSMTP" label-width="80px">
+                        <el-form ref="formSMTPRef" :model="formSMTP" label-width="100px">
                             <el-form-item label="SMTP服务器">
                                 <el-input v-model="formSMTP['smtp-host']"></el-input>
                             </el-form-item>
@@ -59,10 +62,10 @@
                             <el-form-item label="SSL">
                                 <el-checkbox v-model="formSMTP['smtp-ssl']"></el-checkbox>
                             </el-form-item>
-                            <el-form-item label="STMP用户">
+                            <el-form-item label="SMTP用户">
                                 <el-input v-model="formSMTP['smtp-username']"></el-input>
                             </el-form-item>
-                            <el-form-item label="STMP密码">
+                            <el-form-item label="SMTP密码">
                                 <el-input v-model="formSMTP['smtp-password']"></el-input>
                             </el-form-item>
                             <el-form-item>
