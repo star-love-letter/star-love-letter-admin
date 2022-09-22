@@ -31,8 +31,8 @@
             <el-tab-pane label="页面显示">
                 <div class="container">
                     <div class="form-box">
-                        <el-form ref="formViewRef" :model="formView" label-width="80px">
-                            <el-form-item label="统计代码">
+                        <el-form ref="formViewRef" :model="formView" label-width="150px">
+                            <el-form-item label="统计代码(不带script)">
                                 <el-input type="textarea" :rows="4" v-model="formView['view-statsCode']"></el-input>
                             </el-form-item>
                             <el-form-item label="页面头部">
@@ -166,7 +166,8 @@ export default {
             },
             formView: {
                 'view-header': '',
-                'view-footer': ''
+                'view-footer': '',
+                'view-statsCode': ''
             },
             formSMTP: {
                 'smtp-host': '',
@@ -265,6 +266,7 @@ export default {
 
             this.formView['view-header'] = this.data['view-header'];
             this.formView['view-footer'] = this.data['view-footer'];
+            this.formView['view-statsCode'] = this.data['view-statsCode'];
 
             this.formSMTP['smtp-host'] = this.data['smtp-host'];
             this.formSMTP['smtp-port'] = this.data['smtp-port'];
